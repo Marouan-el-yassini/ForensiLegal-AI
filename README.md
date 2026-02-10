@@ -49,7 +49,7 @@ The core of this project is the **Retrieval-Augmented Generation (RAG)** pipelin
 > ![n8n Workflow](secondPic.jpg)
 
 ### **3. AI Agent & Vector Retrieval**
-*A detailed view of the LangChain nodes and the legal knowledge retrieval process.*
+*A detailed view of the RAG AGENT  and the legal knowledge retrieval process.*
 > ![Vector Retrieval](firstPic.jpg)
 
 ## 👤 Author
