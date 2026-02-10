@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحلل الجنائي الذكي </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <div id="ui-layer">
+        <header class="glass-card header">
+            <div class="logo-area">
+                <div class="pulse-indicator"></div>
+                <h1>نظام التحليل الجنائي <span class="version"></span></h1>
+            </div>
+            <div id="status-bar">EL YASSINI <span id="conn-text">MAROUAN</span></div>
+        </header>
+
+        <div class="layout-body">
+            <aside class="side-panel glass-card">
+                <div class="input-section">
+                    <label class="section-title">المناطق المتضررة المكتشفة</label>
+                    <div id="selected-parts-registry" class="tags-container">
+                        <span class="placeholder">اضغط على النموذج لتحديد الإصابة...</span>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label>جنس الضحية</label>
+                    <select id="victim-sex" class="cyber-input">
+                        <option value="ذكر">ذكر</option>
+                        <option value="أنثى">أنثى</option>
+                    </select>
+                </div>
+
+                <div class="input-section">
+                    <label>العمر التقريبي</label>
+                    <input type="number" id="victim-age" class="cyber-input" value="30">
+                </div>
+
+                <div class="input-section">
+                    <label>أداة الجريمة المفترضة</label>
+                    <div class="weapon-grid">
+                        <button class="w-btn active" onclick="setWeapon(this, 'سلاح أبيض')">🗡️ سلاح أبيض</button>
+                        <button class="w-btn" onclick="setWeapon(this, 'أداة راضة')">🔨 أداة راضة</button>
+                        <button class="w-btn" onclick="setWeapon(this, 'سلاح ناري')">🔫 سلاح ناري</button>
+                        <button class="w-btn" onclick="setWeapon(this, 'اعتداء جسدي')">👊 اعتداء جسدي</button>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label>توصيف الضرر (المعاينة)</label>
+                    <textarea id="crime-result" class="cyber-input" rows="3" placeholder="أدخل تفاصيل الإصابة..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="action-btn analyze-btn" id="main-submit" onclick="triggerFullAnalysis()">🚀 بدء التحليل الذكي</button>
+                    <button class="action-btn reset-btn" onclick="resetSelections()">إعادة ضبط المسرح</button>
+                </div>
+            </aside>
+
+            <aside id="analysis-panel" class="report-panel glass-card hidden">
+                <div class="panel-header">
+                    <div class="header-tools">
+                        <span class="report-title">التقرير الجنائي الآلي</span>
+                        <button class="refresh-btn" onclick="triggerFullAnalysis()">🔄 تحديث</button>
+                    </div>
+                    <button class="close-btn" onclick="document.getElementById('analysis-panel').classList.add('hidden')">×</button>
+                </div>
+                <div class="progress-line"></div>
+                <div id="output-text" class="ai-response"></div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+    <script>
+        window.currentWeapon = 'سلاح أبيض';
+        function setWeapon(btn, val) {
+            document.querySelectorAll('.w-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            window.currentWeapon = val;
+        }
+    </script>
+</body>
+</html>
