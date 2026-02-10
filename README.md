@@ -41,7 +41,7 @@ The core of this project is the **Retrieval-Augmented Generation (RAG)** pipelin
 ---
 
 ### **1. Forensic 3D Interface**
-*The interactive frontend where the user identifies injury zones on the AI-generated 3D model.*
+*The interactive frontend where the user identifies injury zones on 3D model.*
 > ![Forensic Interface](final%20pic.jpg)
 
 ### **2. n8n Backend Orchestration**
