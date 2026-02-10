@@ -54,7 +54,7 @@ The core of this project is the **Retrieval-Augmented Generation (RAG)** pipelin
 
 ## 👤 Author
 
-**Marouan El Yassini** *Computer Science Student at EMSI Tangier (2AP)* [Portfolio](https://marouan-el-yassini.github.io/Marwan-El-Yassini-Website/) | [LinkedIn](https://ma.linkedin.com/in/marouan-el-yassini-b88a43333)
+**Marouan El Yassini** * Student at EMSI Tangier  (2AP)* [Portfolio](https://marouan-el-yassini.github.io/Marwan-El-Yassini-Website/) | [LinkedIn](https://ma.linkedin.com/in/marouan-el-yassini-b88a43333)
 
 ---
 
