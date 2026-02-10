@@ -46,7 +46,7 @@ The core of this project is the **Retrieval-Augmented Generation (RAG)** pipelin
 
 ### **2. n8n Backend Orchestration**
 *The automation workflow managing the Webhook, AI Agent, and Supabase integration.*
-> ![n8n Workflow](secondPic.jpg)
+> ![n8n Workflow](secondaPic.jpg)
 
 ### **3. AI Agent & Vector Retrieval**
 *A detailed view of the RAG AGENT  and the legal knowledge retrieval process.*
